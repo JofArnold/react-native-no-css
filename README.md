@@ -1,9 +1,12 @@
 # React Native No CSS
 
-WIP
+Essentially a fork of [tachyons-css/react-native-style-tachyons](https://github.com/tachyons-css/react-native-style-tachyons) but with the following changes:
 
+- Uses the standard Tachyons names (except for min-max values which are now `mxh1`, `mnw1` etc as Tachyons ones are unclear and are inconsistent and conflict with `mh2` etc for horiztonal margins)
 
-Basically a fork of [tachyons-css/react-native-style-tachyons](https://github.com/tachyons-css/react-native-style-tachyons) but using the standard names, more selectors and better representation of grays (`gray1`, `gray2`, etc is much easier to type and remember than Tachyons' `moon-gray` etc)
+- Added a default palette. Tachyons uses things like `moon-gray` which are hard to remember. This project uses `gray1` through to `gray9` where the suffix represents progressively lighter grays (makes incrementing in Vim quicker)
+
+- The `cls` prop is replaced with `classNames` which is more like React web and a little easier to type I find.
 
 This will be the API
 
@@ -13,4 +16,4 @@ This will be the API
 </View>
 ```
 
-This is part of my mission to rid the world of direct manipulation of css in projects [no-css](https://github.com/Jofarnold/no-css)
+Rationale: This is part of my mission to rid the world of direct manipulation of css in projects [no-css](https://github.com/Jofarnold/no-css)
