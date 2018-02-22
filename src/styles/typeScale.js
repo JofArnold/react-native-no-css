@@ -9,6 +9,7 @@ const scale = {
   f4: 1.25,
   f5: 1,
   f6: 0.875,
+  f7: 0.75,
 };
 
 export default _.mapValues(scale, val => ({ fontSize: val }));
