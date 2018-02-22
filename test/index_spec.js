@@ -33,7 +33,7 @@ test("styles", t => {
   t.ok(_.has(styles, "w5"), "example: has w5");
   t.ok(_.has(styles, "pb7"), "example: has pb7");
   t.ok(_.has(styles, "f1"), "example: has f1");
-  t.ok(_.has(styles, "absolute_fill"), "example: has absolute-fill");
+  t.ok(_.has(styles, "absolute__fill"), "example: has absolute--fill");
   t.deepEqual(styles.pa3, { padding: 16 }, "pa3 is 16");
   t.deepEqual(styles.br3, { borderRadius: 8 }, "br3 is 8");
   t.deepEqual(styles.bl, { borderLeftWidth: 1 }, "bl works");
@@ -43,10 +43,10 @@ test("styles", t => {
     "br--top works"
   );
   t.deepEqual(styles.o_025, { opacity: 0.025 }, "o-025 is opacity 0.025");
-  t.deepEqual(styles.min_w3, { minWidth: 64 });
-  t.deepEqual(styles.max_w3, { maxWidth: 64 });
-  t.deepEqual(styles.min_h4, { minHeight: 128 });
-  t.deepEqual(styles.max_h4, { maxHeight: 128 });
+  t.deepEqual(styles.mnw3, { minWidth: 64 });
+  t.deepEqual(styles.mw3, { maxWidth: 64 });
+  t.deepEqual(styles.mnh4, { minHeight: 128 });
+  t.deepEqual(styles.mh4, { maxHeight: 128 });
   t.deepEqual(styles.lh_copy, { lineHeight: 24 });
   t.deepEqual(styles.tracked_tight, { letterSpacing: -0.8 });
   t.deepEqual(styles.left_1, { left: 16 });
@@ -57,13 +57,13 @@ test("styles", t => {
 
   /* Underscore version are generated */
   t.ok(
-    _.has(styles, "flx_i"),
+    _.has(styles, "flex_1"),
     "underscore version is generated in addition to hyphenated names"
   );
 
   /* Sizes */
   t.equal(sizes.pa3, 16, "pa3 is 16");
-  t.equal(sizes.max_w2, 32, "max_w2 is 32");
+  t.equal(sizes.mw2, 32, "mw2 is 32");
 
   t.end();
 });
@@ -147,7 +147,11 @@ test("wrapping", t => {
   let result = renderComponent("w5");
   t.deepEqual(result.key, "1", "key is preserved");
   t.deepEqual(result.props.other, "2", "other properties are preserved");
-  t.deepEqual(result.props.children[0].props.classNames, "w2", "child is preserved");
+  t.deepEqual(
+    result.props.children[0].props.classNames,
+    "w2",
+    "child is preserved"
+  );
   t.deepEqual(
     result.props.children[0].props.style,
     [{ width: 32 }],
@@ -202,7 +206,7 @@ test("wrapping", t => {
     "if style is undefined, an array will be created"
   );
 
-  result = renderComponent("flx-i");
+  result = renderComponent("flex-1");
   t.deepEqual(result.props.style, [{ flex: 1 }], "hyphens work");
 
   t.throws(() => renderComponent("w8"), /style 'w8' not found/);
@@ -216,7 +220,10 @@ test("wrapping benchmark", t => {
       <div key="child1" classNames="w2">
         <div classNames="w4" />
       </div>
-      <div key="child4" classNames="bg-#abcdef b--rgba(200,144,233,1.0) burlywood">
+      <div
+        key="child4"
+        classNames="bg-#abcdef b--rgba(200,144,233,1.0) burlywood"
+      >
         <div />
       </div>
     </div>
