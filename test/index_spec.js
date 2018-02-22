@@ -44,9 +44,9 @@ test("styles", t => {
   );
   t.deepEqual(styles.o_025, { opacity: 0.025 }, "o-025 is opacity 0.025");
   t.deepEqual(styles.mnw3, { minWidth: 64 });
-  t.deepEqual(styles.mw3, { maxWidth: 64 });
+  t.deepEqual(styles.mxw3, { maxWidth: 64 });
   t.deepEqual(styles.mnh4, { minHeight: 128 });
-  t.deepEqual(styles.mh4, { maxHeight: 128 });
+  t.deepEqual(styles.mxh4, { maxHeight: 128 });
   t.deepEqual(styles.lh_copy, { lineHeight: 24 });
   t.deepEqual(styles.tracked_tight, { letterSpacing: -0.8 });
   t.deepEqual(styles.left_1, { left: 16 });
@@ -63,7 +63,7 @@ test("styles", t => {
 
   /* Sizes */
   t.equal(sizes.pa3, 16, "pa3 is 16");
-  t.equal(sizes.mw2, 32, "mw2 is 32");
+  t.equal(sizes.mxw2, 32, "mxw2 is 32");
 
   t.end();
 });
