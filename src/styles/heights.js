@@ -26,12 +26,12 @@ export const maxHeights = _.mapValues(
 
 export const minHeights = _.mapValues(
   {
-    "min-h1": 1,
-    "min-h2": 2,
-    "min-h3": 4,
-    "min-h4": 8,
-    "min-h5": 16,
-    "max-h6": 32,
+    mnh1: 1,
+    mnh2: 2,
+    mnh3: 4,
+    mnh4: 8,
+    mnh5: 16,
+    mnh6: 32,
   },
   val => ({ minHeight: val })
 );

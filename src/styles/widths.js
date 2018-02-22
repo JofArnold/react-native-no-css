@@ -26,12 +26,12 @@ export const maxWidths = _.mapValues(
 
 export const minWidths = _.mapValues(
   {
-    "min-w1": 1,
-    "min-w2": 2,
-    "min-w3": 4,
-    "min-w4": 8,
-    "min-w5": 16,
-    "min-w6": 32,
+    mnw1: 1,
+    mnw2: 2,
+    mnw3: 4,
+    mnw4: 8,
+    mnw5: 16,
+    mnw6: 32,
   },
   val => ({ minWidth: val })
 );
