@@ -20,3 +20,13 @@ Typical use:
 
 
 Rationale: This is part of my mission to rid the world of direct manipulation of css in projects [no-css](https://github.com/Jofarnold/no-css)
+
+---
+
+### TODO
+
+- [ ] Stick on
+
+- [ ] Make new repo
+
+- [ ] Add remaining flexbox classes
