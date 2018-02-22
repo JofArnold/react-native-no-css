@@ -14,12 +14,12 @@ export const heights = _.mapValues(
 
 export const maxHeights = _.mapValues(
   {
-    "max-h1": 1,
-    "max-h2": 2,
-    "max-h3": 4,
-    "max-h4": 8,
-    "max-h5": 16,
-    "max-h6": 32,
+    mh1: 1,
+    mh2: 2,
+    mh3: 4,
+    mh4: 8,
+    mh5: 16,
+    mh6: 32,
   },
   val => ({ maxHeight: val })
 );

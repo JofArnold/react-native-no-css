@@ -14,12 +14,12 @@ export const widths = _.mapValues(
 
 export const maxWidths = _.mapValues(
   {
-    "max-w1": 1,
-    "max-w2": 2,
-    "max-w3": 4,
-    "max-w4": 8,
-    "max-w5": 16,
-    "max-w6": 32,
+    mw1: 1,
+    mw2: 2,
+    mw3: 4,
+    mw4: 8,
+    mw5: 16,
+    mw6: 32,
   },
   val => ({ maxWidth: val })
 );
