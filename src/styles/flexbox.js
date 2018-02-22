@@ -20,6 +20,9 @@ export default {
   "flex-row": {
     flexDirection: "row",
   },
+  "flex-column": {
+    flexDirection: "column",
+  },
   "flex-row-reverse": {
     flexDirection: "row-reverse",
   },
