@@ -8,12 +8,15 @@ Essentially a fork of [tachyons-css/react-native-style-tachyons](https://github.
 
 - The `cls` prop is replaced with `classNames` which is more like React web and a little easier to type I find.
 
-This will be the API
+Typical use:
 
 ```
 <View classNames="flex-column justify-between bg-red">
   <Text classNames="gray1">Some text</Text>
 </View>
 ```
+
+`npm i react-native-no-css` or `yarn add react-native-no-css` to install.
+
 
 Rationale: This is part of my mission to rid the world of direct manipulation of css in projects [no-css](https://github.com/Jofarnold/no-css)
