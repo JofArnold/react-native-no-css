@@ -25,7 +25,7 @@ Rationale: This is part of my mission to rid the world of direct manipulation of
 
 ### TODO
 
-- [ ] Stick on
+- [ ] Put on NPM
 
 - [ ] Make new repo
 
