@@ -1,56 +1,68 @@
 export default {
-  absolute: {
-    position: "absolute",
+  "flex-basis-0": {
+    flexBasis: 0,
   },
-  "flx-i": {
-    flex: 1,
-  },
-  "flx-grow": {
+  "flex-grow-1": {
     flexGrow: 1,
   },
-  "flx-row": {
+  "flex-nogrow": {
+    flexGrow: 0,
+  },
+  "flex-noshrink": {
+    flexShrink: 0,
+  },
+  "flex-shrink-1": {
+    flexShrink: 1,
+  },
+  "flex-1": {
+    flex: 1,
+  },
+  "flex-row": {
     flexDirection: "row",
   },
-  "flx-row-reverse": {
+  "flex-row-reverse": {
     flexDirection: "row-reverse",
   },
-  "flx-col-reverse": {
+  "flex-column-reverse": {
     flexDirection: "column-reverse",
   },
-  "flx-wrap": {
+  "flex-wrap": {
     flexWrap: "wrap",
   },
-  aifs: {
+  "items-start": {
     alignItems: "flex-start",
   },
-  aic: {
+  "items-center": {
     alignItems: "center",
   },
-  aife: {
+  "items-end": {
     alignItems: "flex-end",
   },
-  asfs: {
+  "self-start": {
     alignSelf: "flex-start",
   },
-  asc: {
+  "self-center": {
     alignSelf: "center",
   },
-  asfe: {
+  "self-end": {
     alignSelf: "flex-end",
   },
-  ass: {
+  "self-stretch": {
     alignSelf: "stretch",
   },
-  jcfe: {
+  "justify-start": {
+    justifyContent: "flex-start",
+  },
+  "justify-end": {
     justifyContent: "flex-end",
   },
-  jcc: {
+  "justify-center": {
     justifyContent: "center",
   },
-  jcsb: {
+  "justify-between": {
     justifyContent: "space-between",
   },
-  jcsa: {
+  "justify-around": {
     justifyContent: "space-around",
   },
 };
