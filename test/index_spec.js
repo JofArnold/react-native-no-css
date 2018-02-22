@@ -103,23 +103,23 @@ test("colors", t => {
 });
 
 test("wrapping", t => {
-  function createComponent(clsStr, style) {
+  function createComponent(classNamesStr, style) {
     const comp = class extends React.Component {
       render() {
         return (
-          <div key="1" other="2" cls={clsStr} style={style}>
-            <div key="child1" cls="w2">
-              <div cls="w4" />
+          <div key="1" other="2" classNames={classNamesStr} style={style}>
+            <div key="child1" classNames="w2">
+              <div classNames="w4" />
             </div>
-            <div key="child2" cls="w1">
+            <div key="child2" classNames="w1">
               Test
             </div>
-            <div key="child3" cls="w2">
+            <div key="child3" classNames="w2">
               <div />
             </div>
             <div
               key="child4"
-              cls="bg-#abcdef b--rgba(200,144,233,1.0) burlywood"
+              classNames="bg-#abcdef b--rgba(200,144,233,1.0) burlywood"
             >
               <div />
             </div>
@@ -133,9 +133,9 @@ test("wrapping", t => {
     return comp;
   }
 
-  function renderComponent(clsStr, style) {
+  function renderComponent(classNamesStr, style) {
     const renderer = new ShallowRenderer();
-    const Comp = wrap(createComponent(clsStr, style));
+    const Comp = wrap(createComponent(classNamesStr, style));
     renderer.render(<Comp />);
     return renderer.getRenderOutput();
   }
@@ -147,11 +147,11 @@ test("wrapping", t => {
   let result = renderComponent("w5");
   t.deepEqual(result.key, "1", "key is preserved");
   t.deepEqual(result.props.other, "2", "other properties are preserved");
-  t.deepEqual(result.props.children[0].props.cls, "w2", "child is preserved");
+  t.deepEqual(result.props.children[0].props.classNames, "w2", "child is preserved");
   t.deepEqual(
     result.props.children[0].props.style,
     [{ width: 32 }],
-    "child cls is converted"
+    "child classNames is converted"
   );
   t.deepEqual(result.props.children.length, 4, "children are converted");
   t.deepEqual(
@@ -212,11 +212,11 @@ test("wrapping", t => {
 
 test("wrapping benchmark", t => {
   const Orig = wrap(() => (
-    <div key="1" cls="w3">
-      <div key="child1" cls="w2">
-        <div cls="w4" />
+    <div key="1" classNames="w3">
+      <div key="child1" classNames="w2">
+        <div classNames="w4" />
       </div>
-      <div key="child4" cls="bg-#abcdef b--rgba(200,144,233,1.0) burlywood">
+      <div key="child4" classNames="bg-#abcdef b--rgba(200,144,233,1.0) burlywood">
         <div />
       </div>
     </div>
@@ -236,7 +236,7 @@ test("wrapping render class", t => {
   const Orig = wrap(
     class Orig extends React.Component {
       render() {
-        return <div cls="b">hello</div>;
+        return <div classNames="b">hello</div>;
       }
     }
   );
@@ -250,7 +250,7 @@ test("wrapping render class", t => {
 });
 
 test("wrapping render functions", t => {
-  const Orig = wrap(props => <div cls={props.xx}>Some Text</div>);
+  const Orig = wrap(props => <div classNames={props.xx}>Some Text</div>);
 
   const renderer = new ShallowRenderer();
   renderer.render(<Orig xx="b" />);

@@ -34,7 +34,7 @@
 * Wrapper can take functions now. Thanks to [@stefnnn](https://github.com/stefnnn) for [PR#31](https://github.com/tachyons-css/react-native-style-tachyons/pull/31).
 
   ```jsx
-  const wrapped = NativeTachyons.wrap(() => <Text cls="b">Hi there!</Text>).
+  const wrapped = NativeTachyons.wrap(() => <Text classNames="b">Hi there!</Text>).
   ```
 
 ### 3.1.1
@@ -64,7 +64,7 @@
  ```
  Opacity-variants (e.g. `bg-green-10`) are still available.
 
-* The styles object contains only the underscore names, so `styles.flx_i` works, but `styles["flx-i"]` doesn't. The class-wrapping isn't changed, it's syntax is still `cls="flx-i"`.
+* The styles object contains only the underscore names, so `styles.flx_i` works, but `styles["flx-i"]` doesn't. The class-wrapping isn't changed, it's syntax is still `classNames="flx-i"`.
 * The raw values of colors aren't exported anymore.
 
 ## 2.7

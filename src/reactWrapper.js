@@ -4,7 +4,7 @@ import { styles } from "./index";
 import cssColors from "css-color-names";
 
 /* Wrap takes a Component or a render function and recursively replaces
-   the prop 'cls' with the respective 'style' definitions.
+   the prop 'classNames' with the respective 'style' definitions.
    Usually, wrapping a whole Class / Component will do the trick,
    but for some render functions (e.g. ListView -> renderHeader)
    this will not work. Hence the such functions need to be wrapped
@@ -39,8 +39,8 @@ function recursiveStyle(elementsTree) {
   let newProps;
   let translated = false;
 
-  /* Parse cls string */
-  if (_.isString(props.cls)) {
+  /* Parse classNames string */
+  if (_.isString(props.classNames)) {
     newProps = {};
     translated = true;
     if (_.isArray(props.style)) {
@@ -51,32 +51,32 @@ function recursiveStyle(elementsTree) {
       newProps.style = [];
     }
 
-    const splitted = props.cls.replace(/-/g, "_").split(" ");
+    const splitted = props.classNames.replace(/-/g, "_").split(" ");
     for (let i = 0; i < splitted.length; i++) {
-      const cls = splitted[i];
-      if (cls.length > 0) {
-        const style = styles[cls];
+      const classNames = splitted[i];
+      if (classNames.length > 0) {
+        const style = styles[classNames];
         if (style) {
           /* Style found */
           newProps.style.push(style);
-        } else if (cls.startsWith("bg_")) {
+        } else if (classNames.startsWith("bg_")) {
           newProps.style.push({
-            backgroundColor: cls.slice(3),
+            backgroundColor: classNames.slice(3),
           });
-        } else if (cls.startsWith("b__")) {
+        } else if (classNames.startsWith("b__")) {
           newProps.style.push({
-            borderColor: cls.slice(3),
+            borderColor: classNames.slice(3),
           });
-        } else if (cls.startsWith("tint_")) {
+        } else if (classNames.startsWith("tint_")) {
           newProps.style.push({
-            tintColor: cls.slice(3),
+            tintColor: classNames.slice(3),
           });
-        } else if (cssColors[cls] || /^(rgb|#|hsl)/.test(cls)) {
+        } else if (cssColors[classNames] || /^(rgb|#|hsl)/.test(classNames)) {
           newProps.style.push({
-            color: cls,
+            color: classNames,
           });
         } else {
-          throw new Error(`style '${cls}' not found`);
+          throw new Error(`style '${classNames}' not found`);
         }
       }
     }
