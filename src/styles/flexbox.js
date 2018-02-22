@@ -32,6 +32,9 @@ export default {
   "flex-wrap": {
     flexWrap: "wrap",
   },
+  "items-stretch": {
+    alignItems: "stretch",
+  },
   "items-start": {
     alignItems: "flex-start",
   },
