@@ -14,6 +14,7 @@ import opacity from "./styles/opacity";
 import * as absolute from "./styles/absolute";
 import lineHeight from "./styles/lineHeight";
 import tracked from "./styles/tracked";
+import { defaultColors } from "./styles/defaultColors";
 
 const NativeTachyons = {
   wrap: reactWrapper.wrap,
@@ -41,6 +42,7 @@ const NativeTachyons = {
     _.assign(styleSheet, images);
     _.assign(styleSheet, text);
     _.assign(styleSheet, opacity);
+    _.assign(styleSheet, defaultColors);
 
     /* Calculate rem scales */
     const sizes = {};
