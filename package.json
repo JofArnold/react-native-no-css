@@ -1,8 +1,8 @@
 {
   "name": "react-native-style-tachyons",
-  "description": "functional, maintainable styling for react-native",
+  "description": "Functional, maintainable styling for react-native. Based on the excellent react-native-style-tachyons by Fabian Zeindl",
   "license": "Apache-2.0",
-  "version": "3.5.1",
+  "version": "1.0.0",
   "keywords": [
     "react",
     "react-native",
@@ -14,20 +14,21 @@
     "mobile",
     "performance",
     "design",
-    "css"
+    "css",
+    "Tachyons"
   ],
   "author": {
-    "name": "Fabian Zeindl",
-    "email": "fabian.zeindl@gmail.com",
-    "url": "http://github.com/fab1an"
+    "name": "Jof Arnold",
+    "email": "github@jofarnold.com",
+    "url": "http://github.com/jofarnold"
   },
-  "homepage": "https://github.com/tachyons-css/react-native-style-tachyons",
+  "homepage": "https://github.com/JofArnold/react-native-no-css",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tachyons-css/react-native-style-tachyons.git"
+    "url": "git+https://github.com/JofArnold/react-native-no-css.git"
   },
   "bugs": {
-    "url": "https://github.com/tachyons-css/react-native-style-tachyons/issues"
+    "url": "https://github.com/JofArnold/react-native-no-css/issues"
   },
   "main": "lib/index.js",
   "dependencies": {
