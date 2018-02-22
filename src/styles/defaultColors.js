@@ -32,10 +32,10 @@ const tachyonsDefaults = {
   "lightest-blue": "#cdecff",
 };
 
-const makeColorsForPrefix = prefix => {
-  const colors = Object.keys(tachyonsDefaults).reduce((running, key) => {
-    const value = key[tachyonsDefaults];
-    return Object.assign(...running, {
+var makeColorsForPrefix = function makeColorsForPrefix(prefix) {
+  var colors = Object.keys(tachyonsDefaults).reduce(function(running, key) {
+    var value = tachyonsDefaults[key];
+    return Object.assign(running, {
       [`${prefix}${key}`]: value,
     });
   }, {});
