@@ -1,6 +1,6 @@
 export function scaleStyles(rem) {
   return {
-    "absolute-fill": {
+    "absolute--fill": {
       position: "absolute",
       top: 0,
       bottom: 0,
