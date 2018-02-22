@@ -1,4 +1,4 @@
-# React Native Tachyons Standard
+# React Native No CSS
 
 WIP
 
@@ -12,3 +12,5 @@ This will be the API
   <Text classNames="gray1">Some text</Text>
 </View>
 ```
+
+This is part of my mission to rid the world of direct manipulation of css in projects [no-css](https://github.com/Jofarnold/no-css)
