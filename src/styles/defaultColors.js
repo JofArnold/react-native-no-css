@@ -1,5 +1,3 @@
-import _ from "lodash";
-
 const tachyonsDefaults = {
   gray1: "#111",
   gray2: "#333",
