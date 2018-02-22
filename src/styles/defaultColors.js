@@ -1,4 +1,4 @@
-const tachyonsDefaults = {
+export default {
   gray1: "#111",
   gray2: "#333",
   gray3: "#555",
@@ -31,23 +31,3 @@ const tachyonsDefaults = {
   "light-blue": "#96ccff",
   "lightest-blue": "#cdecff",
 };
-
-var makeColorsForPrefix = function makeColorsForPrefix(prefix) {
-  var colors = Object.keys(tachyonsDefaults).reduce(function(running, key) {
-    var value = tachyonsDefaults[key];
-    return Object.assign(running, {
-      [`${prefix}${key}`]: value,
-    });
-  }, {});
-  return colors;
-};
-
-const textColors = makeColorsForPrefix("");
-const borderColors = makeColorsForPrefix("b--");
-const backgroundColors = makeColorsForPrefix("bg-");
-
-export const defaultColors = Object.assign(
-  textColors,
-  borderColors,
-  backgroundColors
-);

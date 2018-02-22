@@ -14,7 +14,7 @@ import opacity from "./styles/opacity";
 import * as absolute from "./styles/absolute";
 import lineHeight from "./styles/lineHeight";
 import tracked from "./styles/tracked";
-import { defaultColors } from "./styles/defaultColors";
+import defaultColors from "./styles/defaultColors";
 
 const NativeTachyons = {
   wrap: reactWrapper.wrap,
@@ -42,7 +42,6 @@ const NativeTachyons = {
     _.assign(styleSheet, images);
     _.assign(styleSheet, text);
     _.assign(styleSheet, opacity);
-    _.assign(styleSheet, defaultColors);
 
     /* Calculate rem scales */
     const sizes = {};
@@ -73,6 +72,13 @@ const NativeTachyons = {
 
     /* Absolute */
     _.assign(styleSheet, absolute.scaleStyles(options.rem));
+
+    /* Default colors */
+    _.forOwn(defaultColors, (val, name) => {
+      styleSheet[`bg-${name}`] = { backgroundColor: val };
+      styleSheet[`${name}`] = { color: val };
+      styleSheet[`b--${name}`] = { borderColor: val };
+    });
 
     /* Colors */
     _.forOwn(options.colors.palette, (val, name) => {

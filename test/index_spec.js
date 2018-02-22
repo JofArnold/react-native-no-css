@@ -54,6 +54,8 @@ test("styles", t => {
   t.deepEqual(styles.absolute, { position: "absolute" });
   t.deepEqual(styles.bottom_0, { bottom: 0 });
   t.deepEqual(styles.ff_iowan, { fontFamily: "Iowan Old Style" });
+  t.deepEqual(styles.gray3, { color: "#555" });
+  t.deepEqual(styles.b__gray1, { borderColor: "#111" });
 
   /* Underscore version are generated */
   t.ok(
