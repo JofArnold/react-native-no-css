@@ -1,4 +1,4 @@
-# React Native Style Tachyons
+# React Native Tachyons Standard
 
 WIP
 
