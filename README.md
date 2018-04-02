@@ -18,9 +18,18 @@ Typical use:
 
 `npm i react-native-no-css` or `yarn add react-native-no-css` to install.
 
+Then add the following lines into your entry point (normally App.js or index.js)
+
+```
+import { StyleSheet } from "react-native";
+import NativeTachyons from "react-native-no-css";
+NativeTachyons.build({}, StyleSheet);
+```
+
 
 Rationale: This is part of my mission to rid the world of direct manipulation of css in projects [no-css](https://github.com/Jofarnold/no-css)
 
+---
 ---
 
 ### TODO
